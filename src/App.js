@@ -1,10 +1,15 @@
-import LandingPage from "./components/LandingPage";
+// import LandingPage from "./components/LandingPage";
+
+import Home from "./screens/Home";
+
 
 function App() {
   return (
-    <>
-      <LandingPage />
-    </>
+    <div>
+      {/* <LandingPage /> */}
+      <Home/>
+
+    </div>
   );
 }
 
