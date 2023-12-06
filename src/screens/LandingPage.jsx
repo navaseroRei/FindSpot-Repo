@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import bgImage from "../assets/image/LandingPageImage.jpg";
 import { IMAGES } from "../common/image";
+import AuthenticationModal from "../components/AuthModal";
+import LoginModal from "../components/LoginModal";
+import RegisterModal from "../components/RegisterModal";
+import ForgotPasswordModal from "../components/ForgotPasswordModal";
+import EmailVerificationModal from "../components/EmailVerificationModal";
+import ResetPasswordModal from "../components/ResetPasswordModal";
+import { useModal, openModal } from "../common/context/myContext";
 
 const LandingPage = () => {
+  const {modal, openModal} = useModal();
+  console.log({modal, openModal});
   return (
     <>
-      <div className="w-full h-screen">
+      <div className="w-full h-screen ">
         <img
           className="top-0 w-full h-screen object-cover"
           src={bgImage}
           alt="findSpotBackground"
         />
-        <div className="bg-slate-900/70 absolute top-0 left-0 w-full h-screen" />
+        <div className="bg-slate-900/70 absolute top-0 left-0 w-full h-screen " />
+
+        <nav className="p-4 absolute z-[100] top-0 w-full flex bg-opacity-10 backdrop-blur-sm bg-[#D9D9D9] justify-center">
+          <div className="  flex flex-row justify-between px-8 py-2 w-[80%] ">
+            <p className="self-center text-2xl font-extrabold text-[#D9D9D9] ">
+              FINDSPOT
+            </p>
+            <button onClick={() => openModal("AuthModal")}>
+              <img
+                src={IMAGES.ic_user}
+                alt="searchbtn"
+                className="hover:scale-125 transition duration-500 cursor-pointer object-contain h-6 w-6 self-center "
+              />
+            </button>
+          </div>
+        </nav>
+        
         <div className="absolute top-0 w-full h-screen flex flex-col justify-center text-white">
           <div className="self-center max-w-[1100px]   p-4 ">
             <h1 className="text-6xl md:text-8xl drop-shadow-2xl font-bold text-center">
