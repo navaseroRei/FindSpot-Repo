@@ -1,7 +1,9 @@
 import React from "react";
 import { IMAGES } from "../common/image";
+import { useModal } from "../common/context/myContext";
 
 const ForgotPasswordModal = () => {
+    const {modal, openModal} = useModal();
   return (
     <div>
       <div className=" ml-[56%] absolute w-[30%]  top-20  z-[200] flex">
@@ -30,7 +32,9 @@ const ForgotPasswordModal = () => {
             </div>
 
             <div className="bg-[#05AAE3] mx-[10%] mt-8 flex flex-row hover:scale-110 transition duration-500 rounded-md p-2">
-              <button className="w-full h-full cursor-pointer">
+              <button className="w-full h-full cursor-pointer"
+              onClick={() => openModal("EmailVerificationModal")}
+              >
                 Reset Password
               </button>
             </div>
@@ -40,6 +44,7 @@ const ForgotPasswordModal = () => {
                 <a
                   href="#"
                   className="ml-1 text-sm text-white font-medium hover:underline"
+                  onClick={() => openModal("LoginModal")}
                 >
                   Login
                 </a>

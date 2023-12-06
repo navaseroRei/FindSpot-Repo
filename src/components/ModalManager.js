@@ -1,9 +1,19 @@
 import React from 'react'
 import { useModal } from '../common/context/myContext'
 import AuthModal from './AuthModal'
+import LoginModal from './LoginModal'
+import RegisterModal from './RegisterModal'
+import ForgotPasswordModal from './ForgotPasswordModal'
+import ResetPasswordModal from './ResetPasswordModal'
+import EmailVerificationModal from './EmailVerificationModal'
 
 const ModalLookup ={
-    AuthModal: AuthModal
+    AuthModal: AuthModal,
+    LoginModal: LoginModal,
+    RegisterModal: RegisterModal,
+    ForgotPasswordModal: ForgotPasswordModal,
+    ResetPasswordModal: ResetPasswordModal,
+    EmailVerificationModal: EmailVerificationModal,
 }
 
 const ModalManager = () => {

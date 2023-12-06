@@ -1,7 +1,9 @@
 import React from "react";
 import { IMAGES } from "../common/image";
+import { useModal, openModal } from "../common/context/myContext";
 
 const RegisterModal = () => {
+    const {modal, openModal} = useModal();
   return (
     <div>
       <div className=" ml-[56%] absolute w-[30%]  top-20  z-[200] flex">
@@ -93,6 +95,7 @@ const RegisterModal = () => {
                 <a
                   href="#"
                   className="ml-1 text-sm text-white font-medium hover:underline"
+                  onClick={() => openModal("LoginModal")}
                 >
                   Login
                 </a>

@@ -1,7 +1,9 @@
 import React from "react";
 import { IMAGES } from "../common/image";
+import { useModal, openModal } from "../common/context/myContext";
 
 const LoginModal = () => {
+    const {modal, openModal} = useModal();
   return (
     <div>
       <div className=" ml-[56%] absolute w-[30%] h-[60%] top-20  z-[200] flex">
@@ -34,7 +36,8 @@ const LoginModal = () => {
               />
             </div>
             <div className="mx-[10%] mt-2 flex flex-row justify-end  rounded-md p-2">
-              <button className="cursor-pointer">
+              <button className="cursor-pointer"
+              onClick={() => openModal("ForgotPasswordModal")}>
                 <p className="text-sm">Forgot your password?</p>
               </button>
             </div>
@@ -47,6 +50,7 @@ const LoginModal = () => {
                 <a
                   href="#"
                   className="ml-1 text-sm text-white font-medium hover:underline"
+                  onClick={() => openModal("RegisterModal")}
                 >
                   Sign Up
                 </a>

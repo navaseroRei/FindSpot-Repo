@@ -1,7 +1,9 @@
 import React from "react";
 import { IMAGES } from "../common/image";
+import { useModal, openModal } from "../common/context/myContext";
 
 const EmailVerificationModal = () => {
+    const {modal, openModal} = useModal();
   return (
     <div>
       <div className=" ml-[56%] absolute w-[30%]  top-20  z-[200] flex">
@@ -26,7 +28,8 @@ const EmailVerificationModal = () => {
             </div>
 
             <div className="bg-[#05AAE3] mx-[10%] hover:scale-110 transition duration-500 mt-8 flex flex-row  rounded-md p-2">
-              <button className="w-full h-full cursor-pointer  ">
+              <button className="w-full h-full cursor-pointer  "
+              onClick={() => openModal("LoginModal")}>
                 Back to Login
               </button>
             </div>
@@ -36,6 +39,7 @@ const EmailVerificationModal = () => {
                 <a
                   href="#"
                   className="ml-1 text-sm text-white font-medium hover:underline"
+                  onClick={() => openModal("RegisterModal")}
                 >
                   Sign Up
                 </a>
