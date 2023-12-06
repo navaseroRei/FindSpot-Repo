@@ -1,7 +1,9 @@
 import React from "react";
 import { IMAGES } from "../common/image";
+import { useModal } from "../common/context/myContext";
 
 const ResetPasswordModal = () => {
+    const {modal, openModal} = useModal();
   return (
     <div>
       <div className=" ml-[56%] absolute w-[30%]  top-20  z-[200] flex">
@@ -70,6 +72,7 @@ const ResetPasswordModal = () => {
                 <a
                   href="#"
                   className="ml-1 text-sm text-white font-medium hover:underline"
+                  onClick={() => openModal("LoginModal")}
                 >
                   Login
                 </a>
