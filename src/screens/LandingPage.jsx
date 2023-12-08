@@ -1,13 +1,7 @@
-import React, { useState } from "react";
-import bgImage from "../assets/image/LandingPageImage.jpg";
+
+import bgImage from "../assets/home-bg.png";
 import { IMAGES } from "../common/image";
-import AuthenticationModal from "../components/AuthModal";
-import LoginModal from "../components/LoginModal";
-import RegisterModal from "../components/RegisterModal";
-import ForgotPasswordModal from "../components/ForgotPasswordModal";
-import EmailVerificationModal from "../components/EmailVerificationModal";
-import ResetPasswordModal from "../components/ResetPasswordModal";
-import { useModal, openModal } from "../common/context/myContext";
+import { useModal } from "../common/context/myContext";
 
 const LandingPage = () => {
   const {modal, openModal} = useModal();

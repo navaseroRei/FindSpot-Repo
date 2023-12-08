@@ -7,4 +7,5 @@ export const IMAGES = {
   ic_user2: require("../assets/icons/ic_user2.png"),
   ic_hidden: require("../assets/icons/ic_hidden.png"),
   ic_check: require("../assets/icons/ic_check.png"),
+ 
 };
