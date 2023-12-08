@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bgImage from "../assets/image/LandingPageImage.jpg";
+import bgImage from "../assets/home-bg.png";
 import { IMAGES } from "../common/image";
 import AuthenticationModal from "../components/AuthModal";
 import LoginModal from "../components/LoginModal";
@@ -10,8 +10,8 @@ import ResetPasswordModal from "../components/ResetPasswordModal";
 import { useModal, openModal } from "../common/context/myContext";
 
 const LandingPage = () => {
-  const {modal, openModal} = useModal();
-  console.log({modal, openModal});
+  const { modal, openModal } = useModal();
+  console.log({ modal, openModal });
   return (
     <>
       <div className="w-full h-screen ">
@@ -36,7 +36,7 @@ const LandingPage = () => {
             </button>
           </div>
         </nav>
-        
+
         <div className="absolute top-0 w-full h-screen flex flex-col justify-center text-white">
           <div className="self-center max-w-[1100px]   p-4 ">
             <h1 className="text-6xl md:text-8xl drop-shadow-2xl font-bold text-center">
